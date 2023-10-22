@@ -2,26 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.page-width {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-width {
+    max-width: 1050px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.bottom_animation {
+  animation: slideInFromBottom 1s ease-in-out;
+  animation-delay: var(--delay);
+}
+
+.left_animation {
+  animation: slideInFromLeft 1s ease-in-out;
+  animation-delay: var(--delay);
+}
+
+.right_animation {
+  animation: slideInFromRight 1s ease-in-out;
+  animation-delay: var(--delay);
 }
