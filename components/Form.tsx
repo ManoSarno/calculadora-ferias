@@ -51,7 +51,7 @@ export default function Form() {
       <div className="flex flex-col gap-0.5">
         <label htmlFor="Dependentes" className="text-[13px] md:text-sm">Dependentes</label>
         <input
-          className="text-[12px] md:text-[13px] border border-gray focus:outline-blue rounded p-1.5"
+          className="bg-white text-[12px] md:text-[13px] border border-gray focus:outline-blue rounded p-1.5 h-9"
           type="number"
           id="Dependentes"
           name="Dependentes"
@@ -62,7 +62,7 @@ export default function Form() {
       <div className="flex flex-col gap-0.5">
         <label htmlFor="Dias" className="text-[13px] md:text-sm">Dias de férias</label>
         <input
-          className="text-[12px] md:text-[13px] border border-gray focus:outline-blue rounded p-1.5"
+          className="bg-white text-[12px] md:text-[13px] border border-gray focus:outline-blue rounded p-1.5 h-9"
           type="number"
           id="Dias"
           name="Dias"
@@ -76,7 +76,7 @@ export default function Form() {
       <div className="flex flex-col gap-0.5">
         <label className="text-[13px] md:text-sm">Abono pecuniário 1/3</label>
         <select 
-          className="text-[12px] md:text-[13px] border border-gray focus:outline-blue rounded p-1.5" 
+          className="bg-white text-[12px] md:text-[13px] border border-gray focus:outline-blue rounded p-1.5 h-9" 
           id="Abono"
           name="Abono"
           value={abonoPecuniario}
@@ -89,7 +89,7 @@ export default function Form() {
       <div className="flex flex-col gap-0.5">
         <label className="text-[13px] md:text-sm">Adiantar 13 parcela?</label>
         <select 
-          className="text-[12px] md:text-[13px] border border-gray focus:outline-blue rounded p-1.5" 
+          className="bg-white text-[12px] md:text-[13px] border border-gray focus:outline-blue rounded p-1.5 h-9" 
           id="Adiantar"
           name="Adiantar"
           value={adiantarParcela}
@@ -99,8 +99,8 @@ export default function Form() {
           <option value="Não">Não</option>
         </select>
       </div>
-      <button className="bg-blue hover:bg-blue2 hover:animate-bounce focus:animate-ping rounded text-white text-[13px] md:text-sm col-span-full p-1.5 mt-3" type="submit">Calcular</button>
-      <button className="col-span-full text-[#5F5F5F] text-[13px]" type="reset" onClick={() => handleClear()}>Limpar</button>
+      <button className="bg-blue hover:bg-blue2 hover:animate-bounce focus:animate-ping rounded text-white text-[13px] md:text-sm col-span-full p-1.5 h-9 mt-3" type="submit">Calcular</button>
+      <button className="col-span-full text-[#5F5F5F] text-[13px] h-9" type="reset" onClick={() => handleClear()}>Limpar</button>
     </form>
   )
 }

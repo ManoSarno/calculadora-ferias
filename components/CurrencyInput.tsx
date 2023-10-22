@@ -60,7 +60,7 @@ export default function CurrencyInput({label, name, placeholder, step, required}
         placeholder={placeholder}
         onKeyDown={(e) => formatCurrency(e)}
         onChange={() => console.log('change')}
-        className="p-1.5 w-full focus:outline-blue"
+        className="bg-white h-9 p-1.5 w-full focus:outline-blue"
         required={required}
       />
     </div>
